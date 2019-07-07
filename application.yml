@@ -1,0 +1,14 @@
+﻿server:
+  port: 50101 #服务端口
+spring:
+  application:
+    name: xc_governer_center #指定服务名
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:50101/eureka/}
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
